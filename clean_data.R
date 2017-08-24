@@ -5,8 +5,11 @@
 library(haven)
 library(dplyr)
 library(readr)
+library(data.table)
+list.files()
 
-afi15 <- read_tsv("Afiliados Activos062015.txt")
+afi15 <- fread("Afiliados Activos062015.txt", sep = "|", dec = ",")
+afi16 <- fread("AFILIADOS_2016_COMPLETA.txt", sep = ";")
 
 
 afi15 <- read_sav("Afiliados Activos062015.sav")
