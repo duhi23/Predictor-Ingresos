@@ -18,4 +18,8 @@ write_sav(cons, "data_consolidada.sav")
 # datos depurados
 data <- read_sav("data_consolidada.sav")
 
-data %>% select(DP_CEDULA, SALARIO_16, SALARIO_15) %>% filter(SALARIO_15<354) %>% summary()
+data %>% select(DP_CEDULA, DP_SUELDO_15, DP_SUELDO_16) %>% filter(DP_SUELDO_15>50000) %>% summary()
+
+
+
+read_table("export.txt")
